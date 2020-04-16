@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL, "rus");
+    double x;
+    double y1;
+    double y2;
+    double k1;
+    double k2;
+    cout << "Введите число:"
+    cin >> x;
+    y1 = x;
+
+    do {
+        y2 = 0.5 * (y1 + (3*x) / ((2 * pow(y1, 2)) + (x / y1)));
+        
+        k1=y1;
+        k2=y2;
+        y1=y2;
+        
+        
+
+    } while (abs(k2 - k1) >= 0.00001);
+    
+    cout << y1;
+    
+}
